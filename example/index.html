@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Система управления презентациями</title>
+    <link rel="stylesheet" href="style/main.css"/>
+   <!-- <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.throttle.min.js"></script>
+    <script type="text/javascript" src="js/lib/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/slide_system.js"></script>-->
+    <script type="text/javascript" src="js/allinone_example_1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            $(".slides", "#first").presentation(
+                    {
+                        slideClass: ".slide",
+                        thumbnails: "#first .thumbs",
+                        enableHotKeys: true,
+                        enableScroll: true
+                    }
+            );
+            $(".slides", "#second").presentation(
+                    {
+                        slideClass: ".slide",
+                        thumbnails: "#second .thumbs",
+                        enableScroll: true
+                    }
+            );
+        })
+    </script>
+</head>
+<body>
+    <div id="first">
+        <div class="thumbs"></div><div
+            class="slides">
+                <div class="slide">
+                    <h1>Как можно управлять?</h1>
+                    <ol>
+                        <li>Кнопками на панели управления</li>
+                        <li>Кликая по миниатюрам на навигационной панеле</li>
+                        <li>Горячими клавишами</li>
+                        <li>Колесом мыши</li>
+                        <li>Программно, используя методы презентации</li>
+                        <li>Включить autoplay с самого начала и наслаждаться</li>
+                    </ol>
+
+                    <h1>Из навигации есть что?</h1>
+                    <ol>
+                        <li>Навигационная панель с миниатюрами слайдов <span class="optional">[ optional ]</span></li>
+                        <li>Номера слайдов и их состояние на навигационной панеле <span class="optional">[ optional ]</span></li>
+                        <li>Подписи к слайдам на навигационной панеле <span class="optional">[ optional ]</span></li>
+                        <li>Номер текущего слайда <span class="optional">[ optional ]</span></li>
+                        <li>Прогрессбар презентации <span class="optional">[ optional ]</span></li>
+                    </ol>
+                </div>
+                <div class="slide">
+                    <h1>А как же анимация?</h1>
+                    <p>Для презентации можно задать эффект смены слайдов!</p>
+
+                    <h1>А если меня не устроит решение из коробки?</h1>
+                    <p>Кому известны слова <span class="cool">deferred</span> и <span class="cool">promice</span>, сможет без проблем добавить и заюзать свой любимый кастомный эффект!</p>
+                    <h1 class="woo">Сейчас <span style="color: #888">исч</span><span style="color:#aaa">езну</span> <span style="color: #ccc;">пла</span><span style="color: #eee;">вно...</span></h1>
+                </div>
+                <div class="slide" data-effect="fade">
+                    <h1>Если хочется кого-то выделить?</h1>
+                    <p>Можно декларативно задать любому слайду любой эффект появления! Независимо от глобальных настроек презентации.</p>
+                    <h1 class="woo">&#8595; Падаем вниз &#8595;</h1>
+                </div>
+                <div class="slide" data-effect="scrolltb">
+                    <h1>А если направо?</h1>
+                    <h1 class="woo">&#8594; Теперь направо! &#8594;</h1>
+                </div>
+                <div class="slide " data-effect="scrolllr" >
+                    <h1>Технические детали</h1>
+                    <p>подробности и исходники <a href="#">на github</a></p>
+                    <img src="img/github.png" class="github" alt="логотип github"/>
+                </div>
+
+                <div class="control-panel-wrpr ss-control">
+                    <div class="control-panel ss-control">
+                        <a class="ss-prev" href="#">&#8592; назад</a><a
+                            class="ss-next" href="#">вперед &#8594;</a><a
+                            class="ss-play" href="#">воспроизвести</a><a
+                            class="ss-fullscreen" href="#">на весь экран</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="second">
+        <div class="thumbs"></div><div
+            class="slides">
+        <div class="slide" data-desc="слайд с подписью">
+            <h1>СЛАЙД</h1>
+        </div>
+        <div class="slide ss-disabled" data-desc="какой-то слайд">
+            <h1>какой-то слайд</h1>
+        </div>
+        <div class="slide ss-start" data-desc="слайд с подписью">
+            <h1>Это удобно?</h1>
+            <p>Декларативно указать стартовый слайд</p>
+
+            <h1>Спрятать ненужное?</h1>
+            <p>Декларативно исключить нужный слайд из потока презентации не удаляя его верстку.
+            Система сама актуализирует номера слайдов и прогрессбар.
+            </p>
+
+            <h1>Подписать что хочется.</h1>
+            <p>Декларативно задать подпись эскизу слайда</p>
+        </div>
+        <div class="slide" data-desc="слайд с подписью">
+            <h1>СЛАЙД</h1>
+        </div>
+        <div class="slide ss-disabled" data-effect="scrolllr" data-desc="еще какой-то слайд" >слайд №5</div>
+
+        <div class="control-panel-wrpr ss-control">
+            <div class="control-panel ss-control">
+                <a class="ss-prev" href="#">&#8592; назад</a><a
+                    class="ss-next" href="#">вперед &#8594;</a><a
+                    class="ss-play" href="#">воспроизвести</a><a
+                    class="ss-fullscreen" href="#">на весь экран</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
