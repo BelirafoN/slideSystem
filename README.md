@@ -2,13 +2,7 @@ slideSystem
 ===========
 jQuery-плагин для создания web-презентаций
 
-## Использование
-
-```js
-$( "#slideshow" ).presentation( options );
-```
-
-#### Зависимости
+## Зависимости
 
 * Если в параметрах презентации запрошена поддержка эскизов слайдов
     * потребуется <a target="_blank" href="https://github.com/niklasvh/html2canvas">html2canvas.js</a>.
@@ -16,6 +10,12 @@ $( "#slideshow" ).presentation( options );
     * потребуются <a target="_blank" href="https://github.com/brandonaaron/jquery-mousewheel">jquery.mousewheel.js</a>;
     * потребуются <a target="_blank" href="https://github.com/cowboy/jquery-throttle-debounce">jquery.ba-throttle-debounce.js</a>;
 *Указанные в зависимостях файлы, можно найти по ссылкам или в каталоге `lib`.
+
+## Использование
+
+```js
+$( "#slideshow" ).presentation( options );
+```
 
 #### Параметры
 
