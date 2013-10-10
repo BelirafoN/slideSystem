@@ -4,8 +4,9 @@ jQuery-плагин для создания web-презентаций
 
 ## Использование
 
+```js
 $( "#slideshow" ).presentation( options );
-
+```
 
 #### Параметры
 
@@ -33,63 +34,18 @@ var defaultSettings = {
 * `autoplay` - автовоспроизведение презентации после загрузки страницы.
     *По умолчанию `false`, автовоспроизведение не используется.
 
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            slideClass: ".slide"
-         }
-    );
-```
-
 * `autoplayDelay` - задержка в миллисекундах между сменами слайдов во время воспроизведения.
     * По умолчанию 2000.
-
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            autoplayDelay: 5000
-         }
-    );
-```
 
 * `progressBar` - отобразить в блоке прогрессбар презентации.
     * Поумолчанию true, прогрессбар отображается.
 
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            progressBar: true
-         }
-    );
-```
-
 * `slideIndex` - отобразить в блоке номер текущего слайда.
     * Поумолчанию true, номер слайда отображается.
-
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            slideIndex: true
-         }
-    );
-```
 
 * `thumbnails` - селектор блока с миниатюрами солайдов.
     * Если селектор не указан, миниатюры слайдов построены не будут.
     * По умолчанию не используется.
-
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            thumbnails: "#thumbs"
-         }
-    );
-```
 
 * `controls` - перечисление элементов управления презентацией.
     * Возможные значения:
@@ -97,38 +53,11 @@ var defaultSettings = {
         * массив с названиями элементов, которые следует добавить;
         * `null` или `false` - не добавлять никаких элементов
 
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            controls: ["prev", "play", "next"]
-         }
-    );
-```
-
 * `enableHotKeys` - активировать управление с помощью горячих клавиш.
     * По умолчанию значение false, не активно.
 
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            enableHotKeys: true
-         }
-    );
-```
-
 * `enableScroll` - активировать управление с помощью колеса мыши.
     * По умолчанию значение false.
-
-Пример:
-```js
-    $( "#slideshow" ).presentation(
-         {
-            enableScroll: true
-         }
-    );
-```
 
 * `toggleEffect` - задать эффект смены слайдов.
 
@@ -136,13 +65,62 @@ var defaultSettings = {
 ```js
     $( "#slideshow" ).presentation(
          {
-            toggleEffect: 'fade'
+            slideClass: ".slide",
+            autoplay: true,
+            autoplayDelay: 5000,
+            progressBar: true,
+            slideIndex: true,
+            thumbnails: false,
+            controls: "all",
+            enableHotKeys: true,
+            enableScroll: true,
+            toggleEffect: "fade"
          }
     );
 ```
 
 #### Методы
 
-скоро
+* `next` - перейти к следующему слайду
+Пример:
+```js
+$( "#slideshow" ).presentation( "next" );
+```
+
+* `prev` - перейти к предыдущему слайду
+Пример:
+```js
+$( "#slideshow" ).presentation( "prev" );
+```
+
+* `go` - перейти к слайду с указанным номером
+Пример:
+```js
+$( "#slideshow" ).presentation( "go", 2 );
+```
+
+* `play` - начать автоматическое проигрывание презентации
+Пример:
+```js
+$( "#slideshow" ).presentation( "play" );
+```
+
+* `stop` - остановить автоматическое проигрывание презентации
+Пример:
+```js
+$( "#slideshow" ).presentation( "stop" );
+```
+
+* `fullscreen` - развернуть/светнуть презентацию в полноэкранный режим
+Пример:
+```js
+$( "#slideshow" ).presentation( "stop" );
+```
+
+* `destroy` - откатить блок презентации в неинициализированное состояние
+Пример:
+```js
+$( "#slideshow" ).presentation( "destroy" );
+```
 
 ##### демо: http://voronyansky.com/demo/slidesystem
