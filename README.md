@@ -8,6 +8,15 @@ jQuery-плагин для создания web-презентаций
 $( "#slideshow" ).presentation( options );
 ```
 
+#### Зависимости
+
+* Если в параметрах презентации запрошена поддержка эскизов слайдов
+    * потребуется <a target="_blank" href="https://github.com/niklasvh/html2canvas">html2canvas.js</a>.
+* Если в параметрах презентации запрошена поддержка управления колесом мышы
+    * потребуются <a target="_blank" href="https://github.com/brandonaaron/jquery-mousewheel">jquery.mousewheel.js</a>;
+    * потребуются <a target="_blank" href="https://github.com/cowboy/jquery-throttle-debounce">jquery.ba-throttle-debounce.js</a>;
+*Указанные в зависимостях файлы, можно найти по ссылкам или в каталоге `lib`.
+
 #### Параметры
 
 ##### По умолчанию:
